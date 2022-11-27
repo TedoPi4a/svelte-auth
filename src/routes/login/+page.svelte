@@ -6,10 +6,10 @@
   <h1> Hey, {guz}   <img src="{src}" alt=""></h1> 
 
   {/if}
-
+  {#if !hidden}
 	<button class="button-6" on:click={loginGoogle}>Google</button>
 	<button class="button-6" on:click={Facebook}>Facebook</button>
-  {#if hidden}
+  {:else}
 	<button class="button-6" on:click={out}>Log out</button>
   {/if}
 

@@ -4,6 +4,7 @@
 </script>
 
 <div>
+    <div class="loader"></div>
     <Myheader/>
     
     <main><slot/></main>

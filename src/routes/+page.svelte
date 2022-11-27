@@ -5,18 +5,16 @@
 
 {:else}
 <h1>You need to be logged in to acces this page</h1>
-<button class="button-6"><a href="/login">Click here to log-in</a></button>
+<a href="/login"><button class="button-6">Click here to log-in</button></a>
 
 {/if}
 
 
 <script>
 		import {  onAuthStateChanged, getAuth } from "firebase/auth";
-        import login from './login.svelte'
         import { initializeApp } from 'firebase/app';
-        import { goto } from '$app/navigation';
-    import Login from "./login.svelte";
-    let hidden = false 
+    let hidden  
+    
     const firebaseConfig = {
   apiKey: "AIzaSyC33HF0D6Cp6VamA_VSDzSzLXLQkg8emB8",
   authDomain: "auth-59373.firebaseapp.com",
@@ -41,7 +39,7 @@ onAuthStateChanged(auth, (user) => {
 </script>
 
 <style>
-    button a{
+     a{
         text-decoration: none;
         color: black;
     }

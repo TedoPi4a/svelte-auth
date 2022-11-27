@@ -1,3 +1,7 @@
+html{
+  transition: all 11s;
+
+}
 body{
     box-sizing: border-box;
     margin: 0;
