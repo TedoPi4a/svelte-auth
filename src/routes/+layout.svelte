@@ -7,7 +7,7 @@
 
 <div>
     <div class="loader hidden">
-        <img src="/Spinner.gif" alt="">
+        <img src="/Spinner1.gif" alt="">
     </div>
     <Myheader/>
     

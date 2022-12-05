@@ -13,14 +13,19 @@
             <a href="/contacts">Contacts</a>
 
         </li>
+        <li>
+            <a href="/date">DB</a>
+
+        </li>
+        {#if hidden} 
         <div class="profile-container">
-            {#if hidden}
+            
         
             <h1>{profilename}</h1> <img src="{profileimg}" alt="">
-            {:else}
-            <h1 class="login-button1"> <a href="/login"> user <br>(click to login)</a>  </h1>
-            {/if}
+           
+            
         </div>
+        {/if}
     </ul>
 
 </nav>

@@ -116,6 +116,7 @@ onAuthStateChanged(auth, (user) => {
 
   }
 });
+
 	</script>
 	
 <style>
