@@ -27,7 +27,7 @@ app.listen(4242, () => console.log('Running on port 4242'));
   </script> -->
 
 
-
+<h1>Kupi si neshto, Rosene</h1>
 <section>
 
   <div class="product-card">
@@ -35,9 +35,8 @@ app.listen(4242, () => console.log('Running on port 4242'));
 			<img src="/bhs_cover.png" alt="">
 		</div>
 		<div class="product-details">
-			<span class="product-catagory">Women,bag</span>
-			<h4><a href="">Women leather bag</a></h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, possimus nostrum!</p>
+			<h4><a href="">Nqkva mizerna pesen</a></h4>
+			<p>ne znam kupi si cmon man</p>
 			<div class="product-bottom-details">
 				<div class="product-price">20leva</div>
 				<div class="product-links">
@@ -71,11 +70,12 @@ a
     text-decoration: none;
 }
 .product-card {
-    width: 22em;
+    width: 20em;
     position: relative;
     box-shadow: 0 2px 7px #dfdfdf;
     margin: 50px auto;
     background: #fafafa;
+    border-radius: 1em;
 }
 
 
@@ -116,9 +116,7 @@ a
     transition: 0.3s;
 }
 
-.product-details h4 a:hover {
-    color: #fbb72c;
-}
+
 
 .product-details p {
     font-size: 15px;
@@ -131,6 +129,9 @@ a
     overflow: hidden;
     border-top: 1px solid #eee;
     padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .product-bottom-details div {
@@ -139,8 +140,9 @@ a
 }
 
 .product-price {
-    font-size: 18px;
-    color: #fbb72c;
+    font-size: 1.4em;
+
+    color: #000000;
     font-weight: 600;
 }
 
