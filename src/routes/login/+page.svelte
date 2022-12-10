@@ -18,6 +18,8 @@
 	<script>
 		import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut, FacebookAuthProvider  } from "firebase/auth";
 		import { initializeApp } from 'firebase/app';
+    import { getFirestore, collection, addDoc, getDocs, doc, getDoc, serverTimestamp } from "firebase/firestore";
+
         import { redirect } from '@sveltejs/kit';
 
     let guz = 'Hey,';
@@ -35,10 +37,9 @@ const firebaseConfig = {
   appId: "1:650279718773:web:93ae747910fa9c00f14d3c"
 };
 
-
-
-
 const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
 
 
 
@@ -50,7 +51,11 @@ signInWithPopup(auth, provider)
     const token = credential.accessToken;
     // The signed-in user info.
     const user = result.user;
-
+    const uid = user.uid;
+    const docRef = addDoc(collection(db, "users"), {
+  name: user.displayName,
+  img : user.photoURL
+});
     // ...
   }).catch((error) => {
     // Handle Errors here.
@@ -107,7 +112,7 @@ onAuthStateChanged(auth, (user) => {
     guz = user.displayName;
     src = user.photoURL;
      hidden = true;
-    const uid = user.uid;
+
     // ...
   } else {
     guz = '';

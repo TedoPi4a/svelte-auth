@@ -1,15 +1,17 @@
-<h1>
-  this is for datebase
+<h1 style="margin: 0;">
+  Users
 </h1>
-<input type="text" bind:value={textinput}>
+<!-- <input type="text" bind:value={textinput}> -->
 {#await promise then guerySnapshot}
   {#each guerySnapshot.docs as doc}
-    <li>{doc.data().name}</li>
+    <div class="profile-container">
+ 
+    <h1>{doc.data().name}</h1> <img src="{doc.data().img}" alt="">
+    </div>
   {/each}
 {/await}
 
 <button class="button-6" on:click={f}>addtodatabase</button>
-<button class="button-6" >addtodatabase</button>
 <script>
   import { initializeApp } from "firebase/app";
   import { getFirestore, collection, addDoc, getDocs, doc, getDoc, serverTimestamp } from "firebase/firestore";
@@ -41,14 +43,44 @@ console.log("Document written with ID: ", docRef.id);
 } catch (e) {
 console.error("Error adding document: ", e);
 }}
-onMount(async () => {
-const querySnapshot = await getDocs(collection(db, "users"));
-querySnapshot.forEach((doc) => {
-// doc.data() is never undefined for query doc snapshots
-msg = doc.data().name
-console.log(doc.id, " => ", doc.data());
-});
-});
+// onMount(async () => {
+// const querySnapshot = await getDocs(collection(db, "users"));
+// querySnapshot.forEach((doc) => {
+// msg = doc.data().name
+// console.log(doc.id, " => ", doc.data());
+// });
+// });
 
 
 </script>
+
+<style>
+      .profile-container{
+        width: 8em;
+        height: 2em;
+        position: relative;
+        display: flex;
+        font-size: 1em;
+        background-color: white;
+        border-radius: 4em;
+        justify-content: space-around;
+        padding: 0 .5em;
+        gap: -2em;
+        margin: 1.4em 0;
+        align-items: center;
+    }
+    .profile-container h1{
+        font-size: .7em;
+        /* position: absolute; */
+        /* width: 1em;
+        left: 0;
+        top: 0; */
+        
+        
+    }
+    .profile-container img {
+        border-radius: 50%;
+        margin: 0;
+        width: 1.5em;
+    }
+</style>
