@@ -15,7 +15,6 @@
 <script>
   import { initializeApp } from "firebase/app";
   import { getFirestore, collection, addDoc, getDocs, doc, getDoc, serverTimestamp } from "firebase/firestore";
-import { onMount } from 'svelte';
   const firebaseConfig = {
       apiKey: "AIzaSyC33HF0D6Cp6VamA_VSDzSzLXLQkg8emB8",
       authDomain: "auth-59373.firebaseapp.com",
@@ -32,13 +31,9 @@ const getQuerySnapshot = async () => {
 }
 
 let promise = getQuerySnapshot ();
-let msg 
-let textinput
 async function f() {
   try {
-const docRef = await addDoc(collection(db, "users"), {
-  name: textinput,
-});
+
 console.log("Document written with ID: ", docRef.id);
 } catch (e) {
 console.error("Error adding document: ", e);
