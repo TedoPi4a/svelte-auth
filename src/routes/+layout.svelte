@@ -17,9 +17,6 @@
 
 <style>
     main{
-        margin: 0 auto;
-        width: fit-content;
-        margin-top: 12em;
     }
     .loader{
         position: fixed;
