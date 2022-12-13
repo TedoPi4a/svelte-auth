@@ -8,13 +8,15 @@ html{
   transition: all 11s;
 
 }
+html, body {
+  height: 100%;
+}
 body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     background: rgb(210,210,210);
 background: linear-gradient(0deg, rgba(210,210,210,1) 0%, rgba(255,255,255,1) 100%);
-height: 100vh;
 font-family: 'Inter', sans-serif;
 font-family: 'Roboto', sans-serif;
 

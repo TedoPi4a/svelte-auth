@@ -1,12 +1,14 @@
 
 {#if hidden}
+
 <div class="bg">
     <h1>Start Your <br> Own Pyramid</h1>
     <h2>Be the boss of your own Pyramid. Achieve financial freedom.</h2>
-    <button>Start Here</button>
+    	<button><a href="#section-1" on:click|preventDefault={scrollIntoView}>Start Now</a></button>
+
 </div>
 <main class="bg2">
-  <div class="price-list">
+  <div class="price-list" id="section-1">
      <div class="price-item">
         <div class="price">
          <h3>Free User <br>
@@ -130,10 +132,17 @@ onAuthStateChanged(auth, (user) => {
 
   }
 });
-
+function scrollIntoView({ target }) {
+		const el = document.querySelector(target.getAttribute('href'));
+		if (!el) return;
+    el.scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
 </script>
 
 <style>
+
      a{
         text-decoration: none;
         color: black;
