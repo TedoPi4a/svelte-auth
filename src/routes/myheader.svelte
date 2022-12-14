@@ -104,7 +104,7 @@ onAuthStateChanged(auth, (user) => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 10em;
+    padding-top: 8em;
     justify-content:flex-start;
     gap: 2em;
     transition: all .5s ease-in-out;
@@ -312,5 +312,12 @@ onAuthStateChanged(auth, (user) => {
         border: 1px solid #875382;
 
     }
-
+    @media screen and (max-width: 780px) {
+.profile-container{
+    visibility: hidden;
+}
+.menu-items{
+    visibility: hidden;
+}
+}
 </style>

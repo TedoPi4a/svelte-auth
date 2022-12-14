@@ -93,8 +93,12 @@
           <button>Join</button>
         </div>
     </div> 
-
-
+    <p class="kon">
+      Be at the top of your own pyramid. Create a sustainable relationship of people willing to work for you, helping you reach financial freedom through passive income. 
+By paying for your membership, you get a link that you can refer people to. When a user comes in with your link and pays for his membership you get half of the money. The more people sign up with your link, the bigger your profit will be.
+    </p>
+    <p class="quote"> "To obtain financial freedom, one must be either a business owner, an investor or both, generating passive income, particularly on a monthly basis."
+    </p>
     
   </div>
 
@@ -153,7 +157,7 @@ function scrollIntoView({ target }) {
       padding-top: 6em;  
       flex-wrap: wrap;
       position: relative;
-      height: 45em;
+      height: 30em;
     }
     .price-item{
       width: 10em;
@@ -223,20 +227,21 @@ function scrollIntoView({ target }) {
       justify-content: center;
       }
       .bg h1{
-        margin: 0;
+        margin-top: .2em;
+        margin-bottom: 0;
         text-align: center;
         text-transform: uppercase;
         text-shadow: 0px 4px 4px #000000;
         color: white;
         font-weight: 400;
-        font-size: 7em;
+        font-size: clamp(2em, 14vw, 6em);
         font-family: 'Roboto';
       }
       .bg h2{
         font-weight: 400;
-        margin: .8em 0;
-        font-size: 1.4em;
-        font-family: 'Roboto';
+        text-align: center;
+        margin-top: 1em;
+        font-size: clamp(.8em, 2vw, 1.4em);
         color: white;
         text-shadow: 3px 4px 2px rgba(0, 0, 0, 0.25);
       }
@@ -245,9 +250,10 @@ function scrollIntoView({ target }) {
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.55);        
         border-radius: 4em;
         padding: 1em 2em; 
+        margin-top: 2em;
         text-transform: uppercase;
         color: white;
-        font-size: 1em;
+        font-size: clamp(.8em, 2vw, 1em);
         cursor: pointer;
         border: 1px solid black;
       }
@@ -257,8 +263,21 @@ function scrollIntoView({ target }) {
         background-size: cover ;
         background-repeat: no-repeat;
         width: 100%;
-        height: 70em;
-        
+        height: 45em
+      }
+      .quote{
+        color: #fff;
+        margin-bottom: 0;
+        margin-top: 6em;
+        height: fit-content;
+      }
+      .kon{
+        color: white;
+        margin-top: 20em;
+        text-align: center;
+        margin-bottom: 0;
+        font-size: 1.2em;
+        padding: 0 10em;
+      }
 
-  }
 </style>
