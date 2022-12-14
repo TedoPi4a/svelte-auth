@@ -4,7 +4,7 @@
 <div class="bg">
     <h1>Start Your <br> Own Pyramid</h1>
     <h2>Be the boss of your own Pyramid. Achieve financial freedom.</h2>
-    	<button><a href="#section-1" on:click|preventDefault={scrollIntoView}>Start Now</a></button>
+    <button href="#section-1" on:click|preventDefault={scrollIntoView}>Click Here</button>
 
 </div>
 <main class="bg2">
@@ -186,6 +186,7 @@ function scrollIntoView({ target }) {
       box-shadow: 1px 4px 4px 2px rgba(0, 0, 0, 0.25);
       border-radius: 30px;
       width: 5.4em;
+      cursor: pointer;
       height: 2.4em;
       text-transform: uppercase;
       margin: 0em auto 1.4em auto;
@@ -247,6 +248,7 @@ function scrollIntoView({ target }) {
         text-transform: uppercase;
         color: white;
         font-size: 1em;
+        cursor: pointer;
         border: 1px solid black;
       }
     .bg2{

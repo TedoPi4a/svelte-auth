@@ -19,11 +19,16 @@
     </div>
    <main>
     <ul> 
-        <div class="hamburger-lines" on:click={() => {isHidden = !isHidden}}>
+        <div class="ham" class:active2={!isHidden} on:click={() => {isHidden = !isHidden}}>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <!-- <div class="hamburger-lines" >
             <span class="line line1"></span>
             <span class="line line2"></span>
             <span class="line line3"></span>
-        </div>  
+        </div>   -->
 
         <div class="menu-items">
         <a class="rectangle" href="/">
@@ -99,16 +104,15 @@ onAuthStateChanged(auth, (user) => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:space-around;
-    gap: -13em;
+    padding-top: 10em;
+    justify-content:flex-start;
+    gap: 2em;
     transition: all .5s ease-in-out;
 }
 .sidebar ul{
-    height: 2em;
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin-bottom: 10em;
 }
 .sidebar li{
     list-style: none;
@@ -127,7 +131,6 @@ onAuthStateChanged(auth, (user) => {
         justify-content: space-around;
         padding: 0 .5em;
         gap: 12%;
-        margin-top: 5em;
         align-items: center;
     }
     .profile-container2 h1{
@@ -146,11 +149,56 @@ onAuthStateChanged(auth, (user) => {
         border: 1px solid #875382;
 
     }
-  .active{
+.line{
+        width: 1.2em;
+  height: 4.5px;
+  background-color: #ecf0f1;
+  display: block;
+  margin: 8px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+    border-radius: 4em;
+  }
+  .ham.active2 .line:nth-child(2){
+    opacity: 0;
+  }
+  
+  .ham.active2 .line:nth-child(1){
+    -webkit-transform: translateY(13px) rotate(45deg);
+    -ms-transform: translateY(13px) rotate(45deg);
+    -o-transform: translateY(13px) rotate(45deg);
+    transform: translateY(13px) rotate(45deg);
+  }
+  
+  .ham.active2 .line:nth-child(3){
+    -webkit-transform: translateY(-13px) rotate(-45deg);
+    -ms-transform: translateY(-13px) rotate(-45deg);
+    -o-transform: translateY(-13px) rotate(-45deg);
+    transform: translateY(-13px) rotate(-45deg);
+  }
+  .ham{
+    position: relative;
+    cursor: pointer;
+    margin-left: .4em;
+    
+  }
+.active2{
+    /* transform: rotate(-180deg); */
+    -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all .1s linear;
+  -o-transition: all .1s linear;
+  transition: all .5s ease-in-out;
+  opacity: 1;
+  
+  }
+.active{
         background-color: var(--purple);
         left: -17em;
         transition: all .5s ease-in-out;
     }
+
+
     main{
         background: var(--purple);
         margin: 0;
