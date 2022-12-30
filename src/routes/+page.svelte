@@ -1,4 +1,5 @@
 
+<div class="body">
 {#if hidden}
 
 <div class="bg">
@@ -93,6 +94,8 @@
           <button>Join</button>
         </div>
     </div> 
+  </div>
+
     <p class="kon">
       Be at the top of your own pyramid. Create a sustainable relationship of people willing to work for you, helping you reach financial freedom through passive income. 
 By paying for your membership, you get a link that you can refer people to. When a user comes in with your link and pays for his membership you get half of the money. The more people sign up with your link, the bigger your profit will be.
@@ -100,7 +103,6 @@ By paying for your membership, you get a link that you can refer people to. When
     <p class="quote"> "To obtain financial freedom, one must be either a business owner, an investor or both, generating passive income, particularly on a monthly basis."
     </p>
     
-  </div>
 
 </main>
 
@@ -109,7 +111,7 @@ By paying for your membership, you get a link that you can refer people to. When
 <a href="/login"><button class="button-6">Click here to log-in</button></a>
 
 {/if}
-
+</div>
 
 <script>
 		import {  onAuthStateChanged, getAuth } from "firebase/auth";
@@ -152,20 +154,17 @@ function scrollIntoView({ target }) {
         color: black;
     }
     .price-list{
-      display: flex;
-      justify-content: space-around;
-      padding-top: 6em;  
-      flex-wrap: wrap;
-      position: relative;
-      height: 30em;
+      display: grid;
+      padding-top: 6em;
+      padding-bottom: 4em;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     }
     .price-item{
-      width: 10em;
-      height: 0em;
       border-radius: 50%;
-      margin: 0;
-      padding: 0;
-
+      margin: 0 auto;
+      max-width: 100%;
+      width: 11em;
     }
     .props{
       background: #D9D9D9;
@@ -173,11 +172,14 @@ function scrollIntoView({ target }) {
       flex-direction: column;
       border-bottom-left-radius: 1em;
       border-bottom-right-radius: 1em;
+      
     }
     .props ul{
       margin: 0;
-      padding-left: 2em;
+      /* padding-left: 2em;
       padding-right: 1em;
+      padding-bottom: 2em; */
+      padding: 10% 1em 10% 2em;
     }
     .props ul li{
       margin: 1em 0 1em 0;
@@ -259,25 +261,26 @@ function scrollIntoView({ target }) {
       }
     .bg2{
         background: url(/Bg-Photo1.png);
-        background-position: center ;
+        background-position: center 1% ;
         background-size: cover ;
         background-repeat: no-repeat;
         width: 100%;
-        height: 45em
+        height: max-content;
       }
       .quote{
         color: #fff;
         margin-bottom: 0;
         margin-top: 6em;
         height: fit-content;
+        text-align: center;
+        padding-bottom: 2em;
       }
       .kon{
         color: white;
-        margin-top: 20em;
+        margin: 2em 0;
         text-align: center;
-        margin-bottom: 0;
         font-size: 1.2em;
-        padding: 0 10em;
+        padding: 0 20%;
       }
 
 </style>
